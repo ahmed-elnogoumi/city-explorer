@@ -1,42 +1,59 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* General Styles */
+body {
+  font-family: 'Press Start 2P', cursive; /* Or another pixelated font */
+  background-color: #9bbc0f; /* Classic Gameboy green */
+  color: #0f380f;  /* Dark green */
   text-align: center;
+  overflow: hidden; /* Prevent scrollbars on small screens */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Form and Input Styles */
+form {
+  display: flex; /* Make the form a flex container */
+  flex-direction: column; /* Stack elements vertically */
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="text"] {
+  padding: 5px;
+  border: 2px solid #0f380f;
+  background-color: #fff;
+  color: black;
+  font-family: inherit; /* Keep the pixelated font */ 
+  cursor: text; /* Add this to show the cursor */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+button {
+  padding: 5px 10px; 
+  border: 2px solid #0f380f;
+  background-color: #fff;
+  font-family: inherit;
+  cursor: pointer;
 }
 
+/* Card Styles */
 .card {
-  padding: 2em;
+  background-color: #fff;
+  border: 4px solid #0f380f;
+  padding: 15px;
+  max-width: 250px; /* Limit card width */
+  text-align: left; /* Align text within the card */
 }
 
-.read-the-docs {
-  color: #888;
+/* Image Styles (reduce image quality) */
+.card img {
+  width: 100%; 
+  max-width: 200px; 
+  height: auto;
+  image-rendering: -moz-crisp-edges;       
+  image-rendering: -o-crisp-edges;         
+  image-rendering: -webkit-optimize-contrast; 
+  image-rendering: pixelated; 
+  -ms-interpolation-mode: nearest-neighbor;
 }
